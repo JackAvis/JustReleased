@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 var cors = require('cors')
 const app = express()
-const db = require('./queries')
+const users = require('./users')
 const port = 5000
 app.use(cors())
 app.use(bodyParser.json())
@@ -17,11 +17,11 @@ app.get('/', (request, response) => {
 })
 
 
-app.get('/users', db.getUsers)
-app.get('/users/:id', db.getUserById)
-app.post('/users', db.createUser)
-app.put('/users/:id', db.updateUser)
-app.delete('/users/:id', db.deleteUser)
+app.get('/users', users.getUsers)
+app.get('/users/:id', users.getUserById)
+app.post('/users', users.createUser)
+app.put('/users/:id', users.updateUser)
+app.delete('/users/:id', users.deleteUser)
 
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)
