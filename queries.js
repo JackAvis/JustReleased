@@ -1,4 +1,5 @@
 const pool = require('./dbInfo').getPool();
+const requestcall = require('request');
 const getUsers = (request, response) => {
     pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
         if (error) {
@@ -60,7 +61,35 @@ const deleteUser = (request, response) => {
     })
 }
 
+const getDataDump = (request, response) => {
+
+    pool.query('SELECT * FROM datadump ORDER BY post_id ASC', (error, results) => {
+        if (error) {
+            throw error
+        }
+        response.status(200).json(results.rows)
+    })
+}
+
+const createDataDump = (request, response) => {
+    const { title, text } = request.body;
+    requestcall('http://www.google.com', function (error, resp, body) {
+        if (!error && resp.statusCode == 200) {
+            console.log('woo') // Print the google web page.
+        }
+        pool.query('INSERT INTO datadump(title, text, created, last_updated) VALUES ($1, $2, NOW(), NOW())', [title, text], (error, results) => {
+            if (error) {
+                response.status(401).send(`data in table already`);
+            }
+            else {
+                response.status(201).send(`data added to the table.`);
+            }
+        })
+    })
+}
 module.exports = {
+    createDataDump,
+    getDataDump,
     getUsers,
     getUserById,
     createUser,
