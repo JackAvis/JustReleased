@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 var cors = require('cors')
 const app = express()
 const db = require('./queries')
-const port = 3000
+const port = 5000
 app.use(cors())
 app.use(bodyParser.json())
 app.use(
@@ -15,8 +15,8 @@ app.use(
 app.get('/', (request, response) => {
     response.json({ info: 'Login Template Express API' })
 })
-app.get('/data', db.getDataDump)
-app.post('/data', db.createDataDump)
+
+
 app.get('/users', db.getUsers)
 app.get('/users/:id', db.getUserById)
 app.post('/users', db.createUser)
