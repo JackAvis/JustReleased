@@ -1,6 +1,7 @@
 // Queries for events here
 const pool = require('./dbInfo').getPool();
 
+
 const getEvents = (request, response) => {
     pool.query('SELECT * FROM events ORDER BY follows DESC', (error, results) => {
         if (error) {
@@ -9,6 +10,7 @@ const getEvents = (request, response) => {
         response.status(200).json(results.rows);
     })
 }
+
 
 const getEventsByType = (request, response) => {
     const type = request.params.type;
@@ -20,6 +22,7 @@ const getEventsByType = (request, response) => {
     })
 }
 
+
 const getEventCount = (request, response) => {
     pool.query('SELECT count(*) FROM events', (error, results) => {
         if (error) {
@@ -28,6 +31,8 @@ const getEventCount = (request, response) => {
         response.status(200).json(results.rows);
     })
 }
+
+
 const getEventById = (request, response) => {
     const id = parseInt(request.params.id);
 
@@ -53,6 +58,7 @@ const createEvent = (request, response) => {
     })
 }
 
+
 const updateEvent = (request, response) => {
     const id = parseInt(request.params.id);
     console.log(1);
@@ -70,6 +76,7 @@ const updateEvent = (request, response) => {
     )
 }
 
+
 const deleteEvent = (request, response) => {
     const id = parseInt(request.params.id);
 
@@ -80,6 +87,7 @@ const deleteEvent = (request, response) => {
         response.status(200).send(`Event deleted with ID: ${id}`);
     })
 }
+
 
 module.exports = {
     getEvents,

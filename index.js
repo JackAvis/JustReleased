@@ -8,6 +8,8 @@ const events = require('./events')
 const users = require('./users')
 const reminders = require('./reminders')
 const port = 5000
+
+
 app.use(cors())
 app.use(bodyParser.json())
 app.use(
@@ -16,9 +18,11 @@ app.use(
     })
 )
 
+
 app.get('/', (request, response) => {
     response.json({ info: 'The base URL for the RemindMeWhen application!' })
 })
+
 
 // user endpoints
 app.get('/users', users.getUsers)
@@ -46,8 +50,6 @@ app.delete('/events/:id', events.deleteEvent)
 // External event API endpoints
 app.post('/events/vg', vg.createVideoGameEvents)
 app.post('/events/mv', mv.createMovieEvents)
-
-
 
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)

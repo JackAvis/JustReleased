@@ -17,6 +17,8 @@ const months = {
     'Nov': '11',
     'Dec': '12',
 }
+
+
 function generateConfig(id) {
     let config = {
         method: 'GET',
@@ -29,6 +31,7 @@ function generateConfig(id) {
     }
     return config;
 }
+
 
 const createMovieEvents = (request, response) => {
     const dateToTimeStamp = (d) => {
@@ -85,6 +88,7 @@ const createMovieEvents = (request, response) => {
     }
     InsertMvData();
 }
+
 
 module.exports = {
     createMovieEvents,

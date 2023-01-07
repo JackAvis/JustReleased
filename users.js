@@ -1,6 +1,5 @@
 // Queries for users here
 const pool = require('./dbInfo').getPool();
-const axios = require('axios');
 
 const getUsers = (request, response) => {
     pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
@@ -37,6 +36,7 @@ const createUser = (request, response) => {
     })
 }
 
+
 const updateUser = (request, response) => {
     const id = parseInt(request.params.id)
     const { username, email, password } = request.body
@@ -53,6 +53,7 @@ const updateUser = (request, response) => {
     )
 }
 
+
 const deleteUser = (request, response) => {
     const id = parseInt(request.params.id)
 
@@ -63,6 +64,7 @@ const deleteUser = (request, response) => {
         response.status(200).send(`User deleted with ID: ${id}`)
     })
 }
+
 
 module.exports = {
     getUsers,

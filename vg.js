@@ -4,6 +4,7 @@ const axios = require('axios');
 const { VG_RELEASE_DATE_URL, VG_GAME_URL, VG_GAME_DATA, VG_COVER_URL } = require('./constants');
 var constants = require('./constants');
 
+
 const generateConfig = (url, data) => {
     // create the necessary config object for use in queries, using the associated url and data specification.
     let config = {
@@ -19,10 +20,9 @@ const generateConfig = (url, data) => {
     return config
 }
 
+
 const createVideoGameEvents = (request, response) => {
     let values = [];
-    console.log(1);
-    return;
     async function InsertVgData() {
         // intial api call for recent game data.
         let res = await axios(generateConfig(constants.VG_GAME_URL, constants.VG_GAME_DATA));
@@ -86,6 +86,7 @@ const createVideoGameEvents = (request, response) => {
     }
     InsertVgData();
 }
+
 
 module.exports = {
     createVideoGameEvents,

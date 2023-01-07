@@ -1,6 +1,7 @@
 // Queries for reminders here
 const pool = require('./dbInfo').getPool();
 
+
 const getReminders = (request, response) => {
     pool.query('SELECT * FROM reminders ORDER BY reminder_id ASC', (error, results) => {
         if (error) {
@@ -35,6 +36,7 @@ const createReminder = (request, response) => {
     })
 }
 
+
 const updateReminder = (request, response) => {
     const id = parseInt(request.params.id);
     const { remind_date, remind_type } = request.body;
@@ -51,6 +53,7 @@ const updateReminder = (request, response) => {
     )
 }
 
+
 const deleteReminder = (request, response) => {
     const id = parseInt(request.params.id);
 
@@ -61,6 +64,7 @@ const deleteReminder = (request, response) => {
         response.status(200).send(`reminder deleted with ID: ${id}`);
     })
 }
+
 
 module.exports = {
     getReminders,
