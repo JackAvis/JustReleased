@@ -68,6 +68,23 @@ I created JustReleased to learn more about hosting backend applications, specifi
 Visit the [API Documentation](https://example.com) for more information on the available endpoints.
 
 
+## API Documentation
+
+### GET 
+
+#### All Events
+
+`GET /events/`
+
+### Event by ID
+
+`GET /events/:id/`
+
+#### Events by Type
+
+`GET /events/:type/`
+
+
 
 ##  Examples
 
