@@ -6,5 +6,7 @@ module.exports = Object.freeze({
     VG_GAME_URL: "https://api.igdb.com/v4/games/",
     VG_GAME_DATA: `fields *; where first_release_date > ${Date.now()} & hypes > 10; sort hypes; limit 50;`,
     VG_RELEASE_DATE_URL: "https://api.igdb.com/v4/release_dates/",
-    VG_COVER_URL: "https://api.igdb.com/v4/covers"
+    VG_COVER_URL: "https://api.igdb.com/v4/covers",
+    MV_API_KEY: "k_pbw7qhz9",
+    MV_URL: "https://imdb-api.com/en/API/ComingSoon/"
 });

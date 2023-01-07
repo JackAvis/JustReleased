@@ -21,6 +21,8 @@ const generateConfig = (url, data) => {
 
 const createVideoGameEvents = (request, response) => {
     let values = [];
+    console.log(1);
+    return;
     async function InsertVgData() {
         // intial api call for recent game data.
         let res = await axios(generateConfig(constants.VG_GAME_URL, constants.VG_GAME_DATA));

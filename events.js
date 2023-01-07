@@ -1,6 +1,5 @@
 // Queries for events here
 const pool = require('./dbInfo').getPool();
-const axios = require('axios');
 
 const getEvents = (request, response) => {
     pool.query('SELECT * FROM events ORDER BY follows DESC', (error, results) => {
@@ -11,7 +10,24 @@ const getEvents = (request, response) => {
     })
 }
 
+const getEventsByType = (request, response) => {
+    const type = request.params.type;
+    pool.query('SELECT * FROM events WHERE type = $1 ORDER BY event_id DESC', [type], (error, results) => {
+        if (error) {
+            throw error;
+        }
+        response.status(200).json(results.rows);
+    })
+}
 
+const getEventCount = (request, response) => {
+    pool.query('SELECT count(*) FROM events', (error, results) => {
+        if (error) {
+            throw error;
+        }
+        response.status(200).json(results.rows);
+    })
+}
 const getEventById = (request, response) => {
     const id = parseInt(request.params.id);
 
@@ -67,6 +83,8 @@ const deleteEvent = (request, response) => {
 
 module.exports = {
     getEvents,
+    getEventsByType,
+    getEventCount,
     getEventById,
     createEvent,
     updateEvent,

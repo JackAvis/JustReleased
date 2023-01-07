@@ -2,7 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 var cors = require('cors')
 const app = express()
-const externalEvents = require('./vg')
+const vg = require('./vg')
+const mv = require('./mv')
 const events = require('./events')
 const users = require('./users')
 const reminders = require('./reminders')
@@ -35,13 +36,17 @@ app.delete('/reminders/:id', reminders.deleteReminder)
 
 // event endpoints
 app.get('/events', events.getEvents)
+app.get('/events/count', events.getEventCount)
+app.get('/events/type/:type', events.getEventsByType)
 app.get('/events/:id', events.getEventById)
 app.post('/events', events.createEvent)
 app.put('/events/:id', events.updateEvent)
 app.delete('/events/:id', events.deleteEvent)
 
 // External event API endpoints
-app.post('/events/vg', externalEvents.createVideoGameEvents)
+app.post('/events/vg', vg.createVideoGameEvents)
+app.post('/events/mv', mv.createMovieEvents)
+
 
 
 app.listen(port, () => {
