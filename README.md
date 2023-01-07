@@ -3,12 +3,11 @@
 <div align="Center">
 
 ##  JustReleased
-	
 <p align="left">
 
 JustReleased is an API made to give useful information about movies and video games that have or are about to release!
 
-<a href="https://github.com/github_username/repo_name">View Demo</a>
+<a href="https://github.com/github_username/repo_name"></a>
 <!-- TABLE OF CONTENTS -->
 
 <details>
@@ -82,6 +81,7 @@ axios.get(`http://67.207.92.253:5000/events`)
 ```
 GET - Events by Type
 ```javascript
+// events:
 // movie = 'mv' 
 // videogame = 'vg'
 axios.get(`http://67.207.92.253:5000/events/type/:type`)
