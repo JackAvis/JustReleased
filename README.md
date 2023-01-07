@@ -1,10 +1,10 @@
 
 
-<div align="center">
+<div align="Center">
 
-<h3 align="center">JustReleased</h3>
+<h3 align="Center">JustReleased</h3>
 
-<p align="center">
+<p align="left">
 
 JustReleased is an API made to give useful information about movies and video games that have or are about to release!
 
@@ -15,47 +15,29 @@ JustReleased is an API made to give useful information about movies and video ga
 
 <details>
 
-<summary>Table of Contents</summary>
+<summary align="left">Table of Contents</summary>
 
 <ol>
 
-<li>
+<li align="left">
 
 <a href="#about-the-project">About The Project</a>
 
 <ul>
 
-<li><a href="#built-with">Built With</a></li>
+<li align="left"><a href="#built-with">Built With</a></li>
 
 </ul>
 
 </li>
 
-<li>
 
-<a href="#getting-started">Getting Started</a>
+<li align="left"><a href="#usage">Usage</a></li>
 
-<ul>
+<li align="left"><a href="#examples">Examples</a></li>
 
-<li><a href="#prerequisites">Prerequisites</a></li>
 
-<li><a href="#installation">Installation</a></li>
 
-</ul>
-
-</li>
-
-<li><a href="#usage">Usage</a></li>
-
-<li><a href="#roadmap">Roadmap</a></li>
-
-<li><a href="#contributing">Contributing</a></li>
-
-<li><a href="#license">License</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-<li><a href="#acknowledgments">Acknowledgments</a></li>
 
 </ol>
 
@@ -64,12 +46,13 @@ JustReleased is an API made to give useful information about movies and video ga
 <!-- ABOUT THE PROJECT -->
 
 ##  About The Project
-
+<p align="left">
 I created JustReleased to learn more about hosting backend applications, specifically through a Linux vps, Express.js and using Postgres. The API is hosted on an ubuntu droplet with DigitalOcean.
-
+<p/>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ###  Built With:
+<div align="left">
 
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 
@@ -81,7 +64,7 @@ I created JustReleased to learn more about hosting backend applications, specifi
 
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<div />
 
 ##  Usage
 
