@@ -81,7 +81,7 @@ axios.get(`http://67.207.92.253:5000/events`)
 ```
 GET - Events by Type
 ```javascript
-// events:
+// event types:
 // movie = 'mv' 
 // videogame = 'vg'
 axios.get(`http://67.207.92.253:5000/events/type/:type`)
