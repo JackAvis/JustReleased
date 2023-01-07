@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 var cors = require('cors')
 const app = express()
-const externalEvents = require('./externalEvents')
+const externalEvents = require('./vg')
 const events = require('./events')
 const users = require('./users')
 const reminders = require('./reminders')
@@ -41,7 +41,7 @@ app.put('/events/:id', events.updateEvent)
 app.delete('/events/:id', events.deleteEvent)
 
 // External event API endpoints
-app.post('/events/external', externalEvents.createVideoGameEvents)
+app.post('/events/vg', externalEvents.createVideoGameEvents)
 
 
 app.listen(port, () => {

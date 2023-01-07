@@ -3,7 +3,7 @@ const pool = require('./dbInfo').getPool();
 const axios = require('axios');
 
 const getEvents = (request, response) => {
-    pool.query('SELECT * FROM events ORDER BY event_id ASC', (error, results) => {
+    pool.query('SELECT * FROM events ORDER BY follows DESC', (error, results) => {
         if (error) {
             throw error;
         }

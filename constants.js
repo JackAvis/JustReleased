@@ -1,8 +1,10 @@
 
+
 module.exports = Object.freeze({
     VG_CLIENT_ID: "1kcquaftbv249cuwslv5rmbasotdc4",
     VG_BEARER_TOKEN: "Bearer 3vujqhiblzmx2ddbelpc08h327lh4m",
     VG_GAME_URL: "https://api.igdb.com/v4/games/",
-    VG_GAME_DATA: "fields age_ratings,aggregated_rating,aggregated_rating_count,alternative_names,artworks,bundles,category,checksum,collection,cover,created_at,dlcs,expanded_games,expansions,external_games,first_release_date,follows,forks,franchise,franchises,game_engines,game_localizations,game_modes,genres,hypes,involved_companies,keywords,language_supports,multiplayer_modes,name,parent_game,platforms,player_perspectives,ports,rating,rating_count,release_dates,remakes,remasters,screenshots,similar_games,slug,standalone_expansions,status,storyline,summary,tags,themes,total_rating,total_rating_count,updated_at,url,version_parent,version_title,videos,websites;",
-    VG_RELEASE_DATE_URL: "https://api.igdb.com/v4/release_dates/"
+    VG_GAME_DATA: `fields *; where first_release_date > ${Date.now()} & hypes > 10; sort hypes; limit 50;`,
+    VG_RELEASE_DATE_URL: "https://api.igdb.com/v4/release_dates/",
+    VG_COVER_URL: "https://api.igdb.com/v4/covers"
 });
