@@ -72,36 +72,36 @@ Visit the [API Documentation](https://example.com) for more information on the a
 
 ### GET 
 
-#### All Events
+#### All Releases
 
-`GET /events/`
+`GET /releases/`
 
-### Event by ID
+### Release by ID
 
-`GET /events/:id/`
+`GET /releases/:id/`
 
-#### Events by Type
+#### Releases by Type
 
-`GET /events/:type/`
+`GET /releases/:type/`
 
 
 
 ##  Examples
 
-GET - All events
+GET - All releases
 ```javascript
-axios.get(`http://67.207.92.253:5000/events`)
+axios.get(`http://67.207.92.253:5000/releases`)
 	.then(res  => {
 		const  data  =  res.data;
 		console.log(data);
 })
 ```
-GET - Events by Type
+GET - Releases by type
 ```javascript
-// event types:
+// releases types:
 // movie = 'mv' 
 // videogame = 'vg'
-axios.get(`http://67.207.92.253:5000/events/type/:type`)
+axios.get(`http://67.207.92.253:5000/releases/type/:type`)
 	.then(res  => {
 		const  data  =  res.data;
 		console.log(data);
