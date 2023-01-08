@@ -3,7 +3,7 @@ const pool = require('./dbInfo').getPool();
 
 
 const getEvents = (request, response) => {
-    pool.query('SELECT * FROM events ORDER BY follows DESC', (error, results) => {
+    pool.query('SELECT * FROM events ORDER BY release_date DESC LIMIT 100', (error, results) => {
         if (error) {
             throw error;
         }
@@ -14,7 +14,7 @@ const getEvents = (request, response) => {
 
 const getEventsByType = (request, response) => {
     const type = request.params.type;
-    pool.query('SELECT * FROM events WHERE type = $1 ORDER BY event_id DESC', [type], (error, results) => {
+    pool.query('SELECT * FROM events WHERE type = $1 ORDER BY release_date DESC LIMIT 50', [type], (error, results) => {
         if (error) {
             throw error;
         }
@@ -25,6 +25,24 @@ const getEventsByType = (request, response) => {
 
 const getEventCount = (request, response) => {
     pool.query('SELECT count(*) FROM events', (error, results) => {
+        if (error) {
+            throw error;
+        }
+        response.status(200).json(results.rows);
+    })
+}
+
+const getRecentEvents = (request, response) => {
+    pool.query('SELECT * FROM events WHERE release_date < NOW() ORDER BY release_date DESC LIMIT 20', (error, results) => {
+        if (error) {
+            throw error;
+        }
+        response.status(200).json(results.rows);
+    })
+}
+
+const getUpcomingEvents = (request, response) => {
+    pool.query('SELECT * FROM events WHERE release_date > NOW() ORDER BY release_date ASC LIMIT 20', (error, results) => {
         if (error) {
             throw error;
         }
@@ -90,6 +108,8 @@ const deleteEvent = (request, response) => {
 
 
 module.exports = {
+    getRecentEvents,
+    getUpcomingEvents,
     getEvents,
     getEventsByType,
     getEventCount,
