@@ -20,7 +20,7 @@ app.use(
 
 
 app.get('/', (request, response) => {
-    response.json({ info: 'The base URL for the RemindMeWhen application!' })
+    response.json({ info: 'Welcome to the base URL for the JustReleased API! Check out the API Documentation here: https://github.com/Jackson-Davis1/JustReleased for available endpoints and how to use them.' })
 })
 
 
