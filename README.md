@@ -1,8 +1,9 @@
 
 
-<div align="Center">
+<div align="left">
 
-##  JustReleased
+#  JustReleased
+
 <p align="left">
 
 JustReleased is an API made to give useful information about movies and video games that have or are about to release!
@@ -12,7 +13,11 @@ JustReleased is an API made to give useful information about movies and video ga
 
 <details>
 
-<summary align="left">Table of Contents</summary>
+<summary align="left">
+
+## Table of Contents
+
+</summary>
 
 <ol>
 
@@ -28,6 +33,8 @@ JustReleased is an API made to give useful information about movies and video ga
 
 
 <li align="left"><a href="#usage">Usage</a></li>
+
+<li align="left"><a href="#api-documentation">API Documentation</a></li>
 
 <li align="left"><a href="#examples">Examples</a></li>
 
@@ -62,16 +69,21 @@ I created JustReleased to learn more about hosting backend applications, specifi
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-%230167ff.svg?style=for-the-badge&logo=digitalOcean&logoColor=white)
 
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-<div />
 
-##  Usage
+
+## Usage 
+
+
 
 <p align="left">Simply visit <a href=http://67.207.92.253:5000/>the base URL</a> to get started!</p>
 
 Visit the [API Documentation](#api-documentation) for the available endpoints and [Examples](#examples) on how to use them.
 
 
-## API Documentation
+
+## API Documentation 
+
+
 
 All responses have the following JSON structure:
 ```JSON
@@ -99,23 +111,26 @@ All responses have the following JSON structure:
 
 `GET /releases/`
 
-### Release by ID
+#### Release by ID
 
 `GET /releases/:id/`
 
-### Releases by type
+#### Releases by type
 
 `GET /releases/:type/`
 
-### Upcoming Releases
+#### Upcoming Releases
 
 `GET /releases/upcoming/`
 
-### Recent Releases
+#### Recent Releases
 
 `GET /releases/recentlyreleased/`
 
+
 ##  Examples
+
+
 
 GET - All releases
 ```javascript
