@@ -70,7 +70,27 @@ Visit the [API Documentation](https://example.com) for more information on the a
 
 ## API Documentation
 
+All responses have the following JSON structure:
+```
+    {
+        "id": "The integer id of the release",
+        "type": "The Type of release (vg = video game, mv = movie)",
+        "title": "The title of the release.",
+        "description": "The description of the release.",
+        "image": "The cover image of the release.",
+        "url": "The url to a releases corresponding igdb profile (video game) or imdb page (movie)",
+        "follows": "The amount of follows the release has",
+        "release_date": "The release date",
+        "created": "The timestamp of creation in the database.",
+        "last_updated": "The timestamp of last update in the databse."
+    }
+```
 ### GET 
+
+
+#### All Releases
+
+`GET /releases/`
 
 #### All Releases
 
@@ -80,7 +100,7 @@ Visit the [API Documentation](https://example.com) for more information on the a
 
 `GET /releases/:id/`
 
-#### Releases by Type
+### Releases by type
 
 `GET /releases/:type/`
 
