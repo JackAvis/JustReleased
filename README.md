@@ -50,7 +50,7 @@ JustReleased is an API made to give useful information about movies and video ga
 ##  About The Project
 ### Motivation
 <p align="left">
-I created JustReleased to learn more about hosting backend applications, specifically through a Linux vps, Express.js and using Postgres. The API is hosted on an ubuntu droplet with DigitalOcean. 
+I created JustReleased to learn more about hosting backend applications, specifically through a Linux vps, and leveraging Express.js and a Postgres DB. The API is hosted on an ubuntu droplet with DigitalOcean. 
 	
 ### The Data
 	
@@ -71,7 +71,7 @@ I created JustReleased to learn more about hosting backend applications, specifi
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 
 
-## Usage 
+## How to Use 
 
 
 
