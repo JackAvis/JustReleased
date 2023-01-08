@@ -71,7 +71,7 @@ Visit the [API Documentation](https://example.com) for more information on the a
 ## API Documentation
 
 All responses have the following JSON structure:
-```
+```JSON
     {
         "id": "The integer id of the release",
         "type": "The Type of release (vg = video game, mv = movie)",
