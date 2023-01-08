@@ -5,8 +5,8 @@ const app = express()
 const vg = require('./vg')
 const mv = require('./mv')
 const events = require('./releases')
-const users = require('./users')
-const reminders = require('./reminders')
+const users = require('./extras/users')
+const reminders = require('./extras/reminders')
 const port = 5000
 
 

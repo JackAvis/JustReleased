@@ -1,8 +1,8 @@
 
 const pool = require('./dbInfo').getPool();
 const axios = require('axios');
-const { VG_RELEASE_DATE_URL, VG_GAME_URL, VG_GAME_DATA, VG_COVER_URL } = require('./constants');
-var constants = require('./constants');
+const { VG_RELEASE_DATE_URL, VG_GAME_URL, VG_GAME_DATA, VG_COVER_URL } = require('./extras/constants');
+var constants = require('./extras/constants');
 
 
 const generateConfig = (url, data) => {
