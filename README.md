@@ -17,12 +17,10 @@ JustReleased is an API made to give useful information about movies and video ga
 <ol>
 
 <li align="left">
-
 <a href="#about-the-project">About The Project</a>
-
 <ul>
-
 <li align="left"><a href="#built-with">Built With</a></li>
+<li align="left"><a href="#the-data">The Data</a></li>
 
 </ul>
 
@@ -43,8 +41,13 @@ JustReleased is an API made to give useful information about movies and video ga
 <!-- ABOUT THE PROJECT -->
 
 ##  About The Project
+### Motivation
 <p align="left">
-I created JustReleased to learn more about hosting backend applications, specifically through a Linux vps, Express.js and using Postgres. The API is hosted on an ubuntu droplet with DigitalOcean.
+I created JustReleased to learn more about hosting backend applications, specifically through a Linux vps, Express.js and using Postgres. The API is hosted on an ubuntu droplet with DigitalOcean. 
+	
+### The Data
+	
+<p align="left">The movie and videogame data is taken from the <a href="https://imdb-api.com/api">IMDB API</a> and the <a href="https://imdb-api.com/api](https://api-docs.igdb.com/#about)">IGDB API</a> respectively. The data is updated on a monthly basis automatically.</p>
 <p/>
 
 ###  Built With:
