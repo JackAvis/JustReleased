@@ -71,7 +71,7 @@ I created JustReleased to learn more about hosting backend applications, specifi
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 
 
-## Usage 
+## How to Use 
 
 
 
