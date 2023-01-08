@@ -4,7 +4,7 @@ var cors = require('cors')
 const app = express()
 const vg = require('./vg')
 const mv = require('./mv')
-const events = require('./events')
+const events = require('./releases')
 const users = require('./users')
 const reminders = require('./reminders')
 const port = 5000
@@ -38,7 +38,7 @@ app.post('/reminders', reminders.createReminder)
 app.put('/reminders/:id', reminders.updateReminder)
 app.delete('/reminders/:id', reminders.deleteReminder)
 
-// event endpoints
+// release endpoints
 app.get('/releases', events.getEvents)
 app.get('/releases/upcoming/', events.getUpcomingEvents)
 app.get('/releases/recentlyreleased/', events.getRecentEvents)
