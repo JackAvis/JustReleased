@@ -65,7 +65,7 @@ I created JustReleased to learn more about hosting backend applications, specifi
 
 <p align="left">Simply visit <a href=http://67.207.92.253:5000/>the base URL</a> to get started!</p>
 
-Visit the [API Documentation](https://example.com) for more information on the available endpoints.
+Visit the [API Documentation](#api-documentation) for the available endpoints and [Examples](#examples) on how to use them.
 
 
 ## API Documentation
@@ -82,7 +82,7 @@ All responses have the following JSON structure:
         "follows": "The amount of follows the release has",
         "release_date": "The release date",
         "created": "The timestamp of creation in the database.",
-        "last_updated": "The timestamp of last update in the databse."
+        "last_updated": "The timestamp of last update in the database."
     }
 ```
 ### GET 
@@ -134,6 +134,6 @@ axios.get(`http://67.207.92.253:5000/releases/type/:type`)
 })
 ```
 
-Visit the [API Documentation](https://example.com) for more information on the available endpoints.
+Visit the [API Documentation](#api-documentation) for more information on the available endpoints.
 
 <p align="right">(<a href="#justreleased">back to top</a>)</p>
