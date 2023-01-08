@@ -54,7 +54,7 @@ I created JustReleased to learn more about hosting backend applications, specifi
 	
 ### The Data
 	
-<p align="left">The movie and videogame data is taken from the <a href="https://imdb-api.com/api">IMDB API</a> and the <a href="https://imdb-api.com/api](https://api-docs.igdb.com/#about)">IGDB API</a> respectively. The data is updated on a monthly basis automatically.</p>
+<p align="left">The movie and videogame data is taken from the <a href="https://imdb-api.com/api">IMDB API</a> and the <a href="https://api-docs.igdb.com/#about">IGDB API</a> respectively. The data is updated on a monthly basis automatically.</p>
 <p/>
 
 ###  Built With:
