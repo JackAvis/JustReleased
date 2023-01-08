@@ -3,7 +3,7 @@ const pool = require('./dbInfo').getPool();
 
 
 const getEvents = (request, response) => {
-    pool.query('SELECT * FROM events ORDER BY release_date DESC LIMIT 100', (error, results) => {
+    pool.query('SELECT * FROM events ORDER BY event_id ASC LIMIT 100', (error, results) => {
         if (error) {
             throw error;
         }
@@ -14,7 +14,7 @@ const getEvents = (request, response) => {
 
 const getEventsByType = (request, response) => {
     const type = request.params.type;
-    pool.query('SELECT * FROM events WHERE type = $1 ORDER BY release_date DESC LIMIT 50', [type], (error, results) => {
+    pool.query('SELECT * FROM events WHERE type = $1 and release_date > NOW() ORDER BY release_date ASC LIMIT 50', [type], (error, results) => {
         if (error) {
             throw error;
         }
