@@ -104,7 +104,13 @@ All responses have the following JSON structure:
 
 `GET /releases/:type/`
 
+### Upcoming Releases
 
+`GET /releases/upcoming/`
+
+### Recent Releases
+
+`GET /releases/recentlyreleased/`
 
 ##  Examples
 
