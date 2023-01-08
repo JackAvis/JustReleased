@@ -32,7 +32,7 @@ JustReleased is an API made to give useful information about movies and video ga
 </li>
 
 
-<li align="left"><a href="#usage">Usage</a></li>
+<li align="left"><a href="#how-to-use">How to Use</a></li>
 
 <li align="left"><a href="#api-documentation">API Documentation</a></li>
 
